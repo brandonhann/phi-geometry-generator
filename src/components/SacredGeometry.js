@@ -31,7 +31,7 @@ const generateSymmetricPoints = (numPoints, lineWidth, randomSeed) => {
 };
 
 export const GoldenRatioShape = ({ randomSeed, showHorizontal, showVertical }) => {
-    const numPoints = 1 + Math.floor(randomSeed * 6); // Random number of points between 6 and 12
+    const numPoints = goldenRatio + Math.floor(randomSeed * (2 + Math.floor(Math.random() * 5))); // 1 switched w/ phi
 
     // Ensure the number of points is always even
     const evenNumPoints = numPoints % 2 === 0 ? numPoints : numPoints + 1;
@@ -96,7 +96,6 @@ export const GoldenRatioShape = ({ randomSeed, showHorizontal, showVertical }) =
     return (
         <svg
             viewBox={`0 0 ${lineWidth * 2} ${lineWidth * 2}`}
-            className="golden-ratio-shape"
             style={{ transform: `scale(${scaleFactor})` }}
         >
             {lines}

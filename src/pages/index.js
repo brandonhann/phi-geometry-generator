@@ -31,12 +31,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className='w-full m-auto text-center p-4'>
-        <h1 className='text-xl'>Sacred Geomtry Generator</h1>
+      <header className='w-full m-auto text-center pt-2'>
+        <h1 className='text-xl'>Sacred Geometry Generator</h1>
       </header>
 
       <main className="m-auto w-full md:w-3/5 lg:w-1/3 flex flex-col justify-center items-center">
-        <section className="w-full max-w-[1000px]">
+        <section className="w-full m-2">
           <div ref={svgRef}>
             <GoldenRatioShape randomSeed={seed} showHorizontal={showHorizontal} showVertical={showVertical} />
           </div>
@@ -70,7 +70,7 @@ export default function Home() {
           </button>
         </section>
       </main>
-      <footer className="w-full mt-10 text-center p-4 bg-amber-100 border-t-2 border-amber-200 bottom-0">
+      <footer className="w-full mt-4 text-center p-4 bg-amber-100 border-t-2 border-amber-200 bottom-0">
         <p>Developed by <a className='underline' href="https://github.com/brandonhann" target='_blank'>Brandon Hann</a></p>
       </footer>
 
