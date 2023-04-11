@@ -25,19 +25,23 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-amber-50 text-amber-900 flex m-auto h-screen">
+    <div className="bg-amber-50 text-amber-900 flex flex-col m-auto h-screen">
       <Head>
-        <title>Next.js Sacred Geometry</title>
+        <title>Sacred Geometry Generator</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <header className='w-full m-auto text-center p-4'>
+        <h1 className='text-xl'>Sacred Geomtry Generator</h1>
+      </header>
+
       <main className="m-auto w-full md:w-3/5 lg:w-1/3 flex flex-col justify-center items-center">
-        <div className="w-full max-w-[1000px]">
+        <section className="w-full max-w-[1000px]">
           <div ref={svgRef}>
             <GoldenRatioShape randomSeed={seed} showHorizontal={showHorizontal} showVertical={showVertical} />
           </div>
-        </div>
-        <div className="flex gap-4">
+        </section>
+        <section className="flex gap-4">
           <button
             className={`m-auto py-1 px-2 rounded-md shadow-sm ${showHorizontal ? 'bg-green-200 active:bg-green-300' : 'bg-red-200 active:bg-red-300'}`}
             onClick={() => setShowHorizontal(!showHorizontal)}
@@ -50,8 +54,8 @@ export default function Home() {
           >
             {showVertical ? 'Hide' : 'Show'} Vertical
           </button>
-        </div>
-        <div className="flex gap-4 mt-4">
+        </section>
+        <section className="flex gap-4 mt-4">
           <button
             className="py-1 px-2 rounded-md shadow-sm bg-amber-200 active:bg-amber-300"
             onClick={regenerate}
@@ -64,9 +68,9 @@ export default function Home() {
           >
             Save SVG
           </button>
-        </div>
+        </section>
       </main>
-      <footer className="w-full text-center p-4 bg-amber-100 border-t-2 border-amber-200 absolute bottom-0">
+      <footer className="w-full mt-10 text-center p-4 bg-amber-100 border-t-2 border-amber-200 bottom-0">
         <p>Developed by <a className='underline' href="https://github.com/brandonhann" target='_blank'>Brandon Hann</a></p>
       </footer>
 
