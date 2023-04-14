@@ -31,7 +31,7 @@ const generateSymmetricPoints = (numPoints, lineWidth, randomSeed) => {
 };
 
 export const GoldenRatioShape = ({ randomSeed, showHorizontal, showVertical }) => {
-    const numPoints = goldenRatio + Math.floor(randomSeed * (2 + Math.floor(Math.random() * 5))); // 1 switched w/ phi
+    const numPoints = goldenRatio + Math.floor(randomSeed * (2 + Math.floor(5)));
 
     // Ensure the number of points is always even
     const evenNumPoints = numPoints % 2 === 0 ? numPoints : numPoints + 1;
