@@ -10,7 +10,7 @@ The application provides a user interface that allows you to control the visibil
 
 ## How it works
 
-The generator uses React and SVG to create the shapes. The core logic of the shape generation is in the `GoldenRatioShape` component, located in the `sacredgeometry.js` file.
+The generator uses React and SVG to create the shapes. The core logic of the shape generation is in the `GoldenRatioShape` component, located in the `SacredGeometry.js` file.
 
 ### Generating the points
 
