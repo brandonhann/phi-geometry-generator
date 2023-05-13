@@ -1,4 +1,4 @@
-# Sacred Geometry Generator
+# Phi Geometry Generator
 
 https://sacred-geometry-generator.vercel.app/
 
